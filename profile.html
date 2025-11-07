@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | Phattharajarin Boonla</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Prompt', sans-serif;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 50px 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .profile-container {
+      width: 750px;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      padding: 50px 60px;
+      box-sizing: border-box;
+    }
+
+    /* ปุ่มสลับภาษา */
+    .language-switch {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+
+    .language-switch button {
+      font-family: 'Prompt', sans-serif;
+      font-weight: 500;
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      margin-left: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .language-switch button:hover {
+      background: #0077cc;
+    }
+
+    .page-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .page-title h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #111;
+      font-weight: 600;
+    }
+
+    .page-title h2 {
+      margin: 5px 0 0;
+      color: #0077cc;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    section {
+      margin-bottom: 35px;
+    }
+
+    section h3 {
+      border-left: 5px solid #0077cc;
+      padding-left: 10px;
+      color: #111;
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+
+    section p, section li {
+      color: #444;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    /* ปุ่มกลับหน้าแรกปรับให้เหมือน font index */
+    .back-btn {
+      display: inline-block;
+      font-family: 'Prompt', sans-serif;
+      font-weight: 500;
+      background: #000;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .back-btn:hover {
+      background: #0077cc;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="profile-container">
+    <!-- ปุ่มสลับภาษา -->
+    <div class="language-switch">
+      <button onclick="showThai()">TH</button>
+      <button onclick="showEnglish()">EN</button>
+    </div>
+
+    <!-- ภาษาไทย -->
+    <div id="thai">
+      <div class="page-title">
+        <h1>Profile</h1>
+        <h2>ประวัติส่วนตัว</h2>
+      </div>
+
+      <section class="about-me">
+        <h3>ข้อมูลส่วนตัว</h3>
+        <p><b>ชื่อ-สกุล:</b> นางสาวภัทรจาริน บุญลา</p>
+        <p><b>ชื่อเล่น:</b> วาวา</p>
+        <p><b>กรุ๊ปเลือด:</b> บี</p>
+        <p><b>วันเดือนปีเกิด:</b> 21 ธันวาคม 2547</p>
+      </section>
+
+      <section class="contact">
+        <h3>ช่องทางการติดต่อ</h3>
+        <p><b>เบอร์โทรศัพท์:</b> 061 – 6840054</p>
+        <p><b>อีเมลล์:</b> Phattharajarin.b@gmail.com</p>
+        <p><b>ที่อยู่:</b> 102 หมู่ 3 ตำบลท่าทอง อำเภอเมือง จังหวัดพิษณุโลก 65000</p>
+      </section>
+
+      <section class="education">
+        <h3>ประวัติการศึกษา</h3>
+        <ul>
+          <li>
+            <b>มหาวิทยาลัยกรุงเทพ</b> (2566 – ปัจจุบัน)<br>
+            คณะวิศวกรรมศาสตร์ — สาขาวิชาวิศวกรรมปัญญาประดิษฐ์และวิทยาการข้อมูล
+          </li>
+          <li>
+            <b>โรงเรียนเฉลิมขวัญสตรี</b> (2560 – 2566)<br>
+            แผนวิทยาศาสตร์ — คณิตศาสตร์
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- ภาษาอังกฤษ -->
+    <div id="english" style="display:none;">
+      <div class="page-title">
+        <h1>Profile</h1>
+        <h2>Personal Information</h2>
+      </div>
+
+      <section class="about-me">
+        <h3>About Me</h3>
+        <p><b>Name:</b> Phattharajarin Boonla</p>
+        <p><b>Nickname:</b> Wawa</p>
+        <p><b>Blood type:</b> B</p>
+        <p><b>Date of Birth:</b> December 21, 2004</p>
+      </section>
+
+      <section class="contact">
+        <h3>Contact</h3>
+        <p><b>Phone Number:</b> 061 – 6840054</p>
+        <p><b>Email:</b> Phattharajarin.b@gmail.com</p>
+        <p><b>Address:</b> 102 Moo 3, Tha Thong Subdistrict, Mueang District, Phitsanulok 65000, Thailand</p>
+      </section>
+
+      <section class="education">
+        <h3>Education</h3>
+        <ul>
+          <li>
+            <b>Bangkok University</b> (2023 – Present)<br>
+            School of Engineering — Artificial Intelligence Engineering and Data Science
+          </li>
+          <li>
+            <b>Chalermkwansatree School</b> (2017 – 2023)<br>
+            Science — Mathematics
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- ปุ่มกลับหน้าแรก -->
+    <footer>
+      <button onclick="window.location.href='index.html'" class="back-btn">
+        ⬅ กลับหน้าแรก / Back to Home
+      </button>
+    </footer>
+  </div>
+
+  <script>
+    function showThai() {
+      document.getElementById('thai').style.display = 'block';
+      document.getElementById('english').style.display = 'none';
+    }
+
+    function showEnglish() {
+      document.getElementById('thai').style.display = 'none';
+      document.getElementById('english').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

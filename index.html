@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phattharajarin Boonla | Resume</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="resume-card">
+
+    <!-- ฝั่งซ้าย (ชื่อแนวตั้ง) -->
+    <div class="left-panel">
+      <h1 class="vertical-name">
+        Phattharajarin<br><span>Boonla</span>
+      </h1>
+    </div>
+
+    <!-- ฝั่งขวา (ภาพ + ข้อมูลหลัก) -->
+    <div class="right-panel">
+      <img src="image/profile.jpg" alt="Profile" class="profile-img" />
+
+      <div class="intro">
+        <p>
+          Hello, my name is <b>Phattharajarin Boonla (Wawa)</b>.
+          I’m a responsible and motivated individual with a strong interest in Artificial Intelligence and Data Science. 
+          I’m eager to learn, grow, and apply my knowledge to real-world challenges in the engineering field.
+        </p>
+      </div>
+
+      <!-- กล่องสีดำ (ปุ่มลิงก์ต่างๆ) -->
+      <div class="info-boxes">
+        <div class="info-card" onclick="openPage('profile.html')">
+          <h3>Profile</h3>
+        </div>
+        <div class="info-card" onclick="openPage('work-experience.html')">
+          <h3>Work Experience</h3>
+        </div>
+        <div class="info-card" onclick="openPage('skills.html')">
+          <h3>Skills</h3>
+        </div>
+        <div class="info-card" onclick="openPage('contact.html')">
+          <h3> - </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openPage(url) {
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>
